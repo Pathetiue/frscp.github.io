@@ -1,10 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://mit-realm.github.io/gcbfplus/">
-    <title>Redirecting...</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCAP: Occlusion-Aware Contingency Planning</title>
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://mit-realm.github.io/gcbfplus/">link</a>.</p>
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1">OCAP: Occlusion-Aware Contingency Planning</h1>
+        <h2 class="subtitle">
+          Your Name*, Coauthor*, ... (*Equal Contribution)<br>
+          Georgia Tech | MIT
+        </h2>
+        <div class="buttons is-centered">
+          <a href="#paper" class="button is-light">Paper</a>
+          <a href="#code" class="button is-light">Code</a>
+          <a href="#videos" class="button is-light">Videos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="abstract">
+    <div class="container">
+      <h2 class="title is-2">Abstract</h2>
+      <div class="content">
+        <p>
+          Autonomous vehicles must navigate unpredictable environments, especially in urban settings with occlusions. 
+          We present OCAP, an occlusion-aware contingency planning framework that ensures safety by simultaneously 
+          optimizing exploration and fallback trajectories...
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="methodology">
+    <div class="container">
+      <h2 class="title is-2">Methodology</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="figs/trajectory_diagram.png" alt="Dual trajectories">
+              </figure>
+            </div>
+            <div class="card-content">
+              <h3 class="title is-4">Dual-Trajectory Optimization</h3>
+              <p>Simultaneous optimization of exploration and fallback trajectories</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="figs/admm_flow.png" alt="ADMM workflow">
+              </figure>
+            </div>
+            <div class="card-content">
+              <h3 class="title is-4">ADMM Decomposition</h3>
+              <p>Biconvex NLP decomposition for real-time planning</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="results">
+    <div class="container">
+      <h2 class="title is-2">Results</h2>
+      <div class="content">
+        <div class="video-container">
+          <video controls>
+            <source src="videos/ocap_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        
+        <div class="columns has-text-centered mt-6">
+          <div class="column">
+            <div class="notification is-primary">
+              <p class="title">40%</p>
+              <p class="subtitle">Collision Reduction</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="notification is-link">
+              <p class="title">20 Hz</p>
+              <p class="subtitle">Replanning Rate</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="notification is-info">
+              <p class="title">92%</p>
+              <p class="subtitle">Travel Efficiency</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="citation">
+    <div class="container">
+      <h2 class="title is-2">Citation</h2>
+      <pre>@inproceedings{ocap2025,
+  title={OCAP: Occlusion-Aware Contingency Planning},
+  author={Your, Name and Coauthors},
+  booktitle={IEEE International Conference on Robotics and Automation},
+  year={2025}
+}</pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>© 2025 OCAP Project | Georgia Tech & MIT</p>
+    </div>
+  </footer>
+
+  <script src="static/js/index.js"></script>
 </body>
 </html>
