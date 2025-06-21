@@ -188,7 +188,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-Ensuring safe driving while maintaining travel efficiency for autonomous vehicles in dynamic and occluded environments is a critical challenge. This paper proposes an occlusion-aware contingency safety-critical planning approach for real-time autonomous driving in such environments. Leveraging reachability analysis for risk assessment, forward reachable sets of occluded phantom vehicles are computed to quantify dynamic velocity boundaries. These velocity boundaries are incorporated into a biconvex nonlinear programming (NLP) formulation, enabling simultaneous optimization of exploration and fallback trajectories within a receding horizon planning framework. To facilitate real-time optimization and ensure coordination between trajectories, we employ the consensus alternating direction method of multipliers (ADMM) to decompose the biconvex NLP problem into low-dimensional convex subproblems. The effectiveness of the proposed approach is validated through simulation studies and real-world experiments in occluded intersections. Experimental results demonstrate enhanced safety and improved travel efficiency, enabling real-time safe trajectory generation in dynamic occluded intersections under varying obstacle conditions. A video showcasing the experimental results is available at https://youtu.be/CHayG7NChqM.          </p>
+Ensuring safe driving while maintaining travel efficiency for autonomous vehicles in dynamic and occluded environments is a critical challenge. This paper proposes an occlusion-aware contingency safety-critical planning approach for real-time autonomous driving in such environments. Leveraging reachability analysis for risk assessment, forward reachable sets of occluded phantom vehicles are computed to quantify dynamic velocity boundaries. These velocity boundaries are incorporated into a biconvex nonlinear programming (NLP) formulation, enabling simultaneous optimization of exploration and fallback trajectories within a receding horizon planning framework. To facilitate real-time optimization and ensure coordination between trajectories, we employ the consensus alternating direction method of multipliers (ADMM) to decompose the biconvex NLP problem into low-dimensional convex subproblems. The effectiveness of the proposed approach is validated through simulation studies and real-world experiments in occluded intersections. Experimental results demonstrate enhanced safety and improved travel efficiency, enabling real-time safe trajectory generation in dynamic occluded intersections under varying obstacle conditions.  </p>
         </div>
       </div>
     </div>
@@ -203,11 +203,19 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
    <div class="column">
   <div class="content">
     <h2 class="title is-3">Simulation Results</h2>
-    
-    <!-- First Row: Front View -->
+    <div class="content has-text-justified">
+          <b>
+            The ego vehicle is tasked with navigating through the occluded intersection while maintaining its original desired driving lane
+          </b> 
+       <div class="columns">
+      <div class="column">
+        <h3 class="title is-4 has-text-centered mt-5">  Ablation Study  </h3>
+      </div>
+    </div>
+    <!-- First Row: Third-person View  -->
     <div class="columns">
       <div class="column">
-        <h3 class="title is-4 has-text-centered">Front View</h3>
+        <h3 class="title is-5 has-text-centered">Third-person View </h3>
       </div>
     </div>
     
@@ -233,10 +241,10 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
       </div>
     </div>
     
-    <!-- Second Row: Third Person View -->
+    <!-- Second Row: Top-Down View -->
     <div class="columns">
       <div class="column">
-        <h3 class="title is-4 has-text-centered mt-5">Third Person View</h3>
+        <h3 class="title is-5 has-text-centered mt-5">Top-Down View</h3>
       </div>
     </div>
     
@@ -258,18 +266,89 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
         </p>
       </div>
     </div>
+
+
+
+     <div class="columns">
+      <div class="column">
+        <h3 class="title is-4 has-text-centered mt-5">   Occlusion-aware contingency planner VS Control-Tree  </h3>
+      </div>
+    </div>
+    <!-- First Row: Third-person View  -->
+    <div class="columns">
+      <div class="column">
+        <h3 class="title is-5 has-text-centered">Third-person View </h3>
+      </div>
+    </div>
     
+    <div class="columns is-centered">
+      <!-- Occlusion-aware -->
+      <div class="column is-half">
+        <video class="video-player" autoplay muted loop>
+          <source src="videos/OCC_front.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-italic mt-2">
+          Occlusion-aware contingency planner
+        </p>
+      </div>
+      
+      <!-- Occlusion-Ignorant -->
+      <div class="column is-half">
+        <video class="video-player" autoplay muted loop>
+          <source src="videos/No_OCC_Front.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-italic mt-2">
+          Control-Tree 
+        </p>
+      </div>
+    </div>
+    
+    <!-- Second Row: Top-Down View -->
+    <div class="columns">
+      <div class="column">
+        <h3 class="title is-5 has-text-centered mt-5">Top-Down View</h3>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <video class="video-player" autoplay muted loop>
+          <source src="videos/OCC_third.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-italic mt-2">
+          Occlusion-aware contingency planner
+        </p>
+      </div>
+      <div class="column is-half">
+        <video class="video-player" autoplay muted loop>
+          <source src="videos/No_OCC_third.mp4" type="video/mp4">
+        </video>
+       <p class="has-text-centered is-italic mt-2">
+           Control-Tree
+        </p>
+      </div>
+    </div>
+ 
+
+   <div class="columns">
+      <div class="column">
+        <h3 class="title is-4 has-text-centered mt-5">     Occlusion-aware contingency planner vs ST-RHC Baseline
+</h3>
+      </div>
+    </div>
+    
+
     <!-- Third Row: GCBF Controller -->
     <div class="columns">
       <div class="column">
-        <h3 class="title is-4 has-text-centered mt-5">
-          Front View 
+        <h3 class="title is-5 has-text-centered mt-5">
+          Third-person View 
         </h3>
       </div>
     </div>
     
     <div class="columns is-centered">
-      <!-- Front View -->
+      <!-- Third-person View  -->
       <div class="column is-half">
         <video class="video-player" autoplay muted loop>
           <source src="videos/OCC_front.mp4" type="video/mp4">
@@ -283,15 +362,15 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
           <source src="videos/NMPC_front.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-italic mt-2">
-          ST-RHC Baseline
+          ST-RHC  
         </p>
       </div>
     </div>
     
-    <!-- Fourth Row: Third Person View -->
+    <!-- Fourth Row: Top-Down View -->
       <div class="columns">
       <div class="column">
-        <h3 class="title is-4 has-text-centered mt-5">Third Person View</h3>
+        <h3 class="title is-5 has-text-centered mt-5">Top-Down View</h3>
       </div>
     </div>
     <div class="columns is-centered mt-4">
@@ -308,18 +387,21 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
           <source src="videos/NMPC_third.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-italic mt-2">
-          ST-RHC Baseline
+          ST-RHC  
         </p>
       </div>
     </div>
   </div>
 </div>
+
+
     <!--/ Main point 1 -->
 
     <!-- Main point 2 -->
     <div class="column">
       <div class="content">
         <h2 class="title is-3">Hardware Experiments</h2>
+          <div class="content has-text-justified"> 
         <video class="video-player" autoplay muted loop>
           <source src="videos/Hardware.mp4" type="video/mp4">
         </video>
@@ -327,7 +409,7 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
     </div>
     <p>
    The robot features an NVIDIA Jetson Xavier NX and a four-wheel configuration with Ackermann steering , simulating of a scaled road vehicle.  
-     Its sizes are 380 mm by 210 mm, approximately 1:10 scale relative to a full-sized vehicle. Additionally, three PVs are deployed at the intersection, consisting of two AgileX Limo Rover robots and one TianRacer robot.
+     Its sizes are 380mm by 210mm, approximately 1:10 scale relative to a full-sized vehicle. Additionally, three PVs are deployed at the intersection, consisting of two AgileX Limo Rover robots and one TianRacer robot.
     </p> 
     <!-- Main point 3 -->
     <div class="column">
@@ -345,7 +427,7 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
             class="center-image"
             alt="GCBF contours">
         <p class="has-text-centered is-italic mt-2">
-        Snapshot 1.
+        Snapshot 1
         </p>
     </div>
     
@@ -355,7 +437,7 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
             class="center-image"
             alt="GCBF contours">
         <p class="has-text-centered is-italic mt-2">
-        Snapshot 2.
+        Snapshot 2
         </p>
     </div> 
     <!-- Image 3 -->
@@ -364,7 +446,7 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
             class="center-image"
             alt="GCBF contours">
         <p class="has-text-centered is-italic mt-2">
-        Snapshot 3.
+        Snapshot 3
         </p>
     </div>
     </div>
@@ -376,7 +458,7 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
             class="center-image"
             alt="GCBF contours">
         <p class="has-text-centered is-italic mt-2">
-        Snapshot 4.
+        Snapshot 4
         </p>
     </div>
     
@@ -386,7 +468,7 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
             class="center-image"
             alt="GCBF contours">
         <p class="has-text-centered is-italic mt-2">
-        Snapshot 5.
+        Snapshot 5
         </p>
     </div> 
     <!-- Image 3 -->
@@ -395,7 +477,7 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
             class="center-image"
             alt="GCBF contours">
         <p class="has-text-centered is-italic mt-2">
-        Snapshot 6.
+        Snapshot 6
         </p>
     </div>
     </div>
@@ -403,6 +485,34 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
     <p>
     Snapshots of a real-world experimental driving task at an occluded four-lane unsignalized intersection. The TianRacer EV (outlined with a green dashed box) navigates through the intersection, with two surrounding dynamic PVs (outlined with orange and yellow dashed boxes) maintaining their respective lanes, posing potential risks. As the EV approaches the intersection, it adjusts its speed dynamically to ensure <b>safe</b> navigation.
     </p>
+    <!-- ... rest of content ... -->
+
+
+
+    <!-- Main point 2 -->
+    <div class="column">
+      <div class="content">
+        <h2 class="title is-3">Computational Performance </h2>
+     
+      </div>
+    </div>
+    <!--/ Main point 3 --> 
+    <!--  Two images in a single row -->
+    <div class="columns">
+    <!-- Image 1 -->
+    <div class="column">   
+        <img src="figs/time.png"
+            class="center-image"
+            width="80%"
+            alt="GCBF contours">
+        <p class="has-text-centered is-italic mt-2">
+       Optimization Time (ms) Across Varying Number of Obstacles
+        </p>
+    </div>  
+    </div>
+    <!-- Continue with text content -->
+    <p>
+The statistical results of the optimization time (in ms) as the considered number of obstacles increases from two to six    </p>
     <!-- ... rest of content ... -->
 
 
