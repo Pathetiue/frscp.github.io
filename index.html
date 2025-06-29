@@ -142,7 +142,7 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
                 </thead>
                 <tbody>
                   <tr>
-                    <td><strong> Ours </strong></td>
+                    <td><strong> OACP (Ours) </strong></td>
                     <td>12.50</td>
                     <td>4.68</td>
                     <td>1.64</td>
@@ -241,7 +241,7 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
                     <source src="videos/OCC_front.mp4" type="video/mp4">
                   </video>
                   <p class="has-text-centered is-italic mt-2">
-                    OACP: Dynamic adaptation
+                    OACP: Proactive adaptation
                   </p>
                 </div>
                 <div class="column">
@@ -291,7 +291,7 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
                     <source src="videos/OCC_front.mp4" type="video/mp4">
                   </video>
                   <p class="has-text-centered is-italic mt-2">
-                    OACP: Dynamic adaptation
+                    OACP: Dynamic velocity adjustment
                   </p>
                 </div>
                 <div class="column">
@@ -401,7 +401,8 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
             <ul>
               <li>Average optimization time: <strong>27.33ms</strong></li>
               <li>Maximum optimization time: <strong>44.65ms</strong></li>
-              <li>Successful navigation without collisions</li>
+              <li>Successful navigation without collisions</li>   
+              <li> Real-time performance maintained under uncertainty</li>   
              </ul>
           </div>
         </div>
@@ -417,14 +418,11 @@ Ensuring safe driving while maintaining travel efficiency for autonomous vehicle
             <div class="column">
               <img src="figs/time.png" alt="Computational Performance">
               <p class="has-text-centered is-italic mt-2">
-                Optimization time cross varying number of obstacles
+                Optimization time across varying number of obstacles
               </p>            
             </div>
             <div class="column">
-              <div class="box">
-              <p>
-              Our consensus ADMM approach maintains real-time performance:
-              </p>
+              <div class="box"> 
               <ul>
                 <li>Linear complexity with respect to number of obstacles: 𝒪(M)</li>
                 <li>Maximum computation per iteration stabilizes at 5-6 obstacles</li>
