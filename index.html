@@ -6,7 +6,7 @@
         content="Occlusion-Aware Contingency Safety-Critical Planning for Autonomous Driving">
   <meta name="keywords" content="Safety-critical planning; Autonomous vehicles; Trajectory optimization; Alternating direction method of multipliers">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OACP</title>
+  <title>OACP: Occlusion-Aware Contingency Planning</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -18,15 +18,12 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <!-- <link rel="icon" href="./static/images/favicon.png"> -->
   <link rel="icon" type="image/svg+xml" href="./static/images/favicon.svg" />
   <link rel="icon" type="image/png" href="./static/images/favicon.png" />
-
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({startOnLoad:true});</script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <!-- <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script> -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
 </head>
 <body>
@@ -39,29 +36,7 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <!-- <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://syzhang092218-source.github.io/">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://mit-realm.github.io/dgppo/">
-            DGPPO: Discrete GCBF Proximal Policy Optimization for Multi-agent Safe Optimal Control
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div> -->
 </nav>
-
 
 <section class="hero">
   <div class="hero-body">
@@ -71,7 +46,7 @@
           <h1 class="title is-1 publication-title">Occlusion-Aware Contingency Safety-Critical Planning for Autonomous Driving</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://zack4417.github.io/">Zheng Lei</a><sup>1</sup>,</span>
+              <a href="https://zack4417.github.io/">Lei Zheng</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="">Rui Yang</a><sup>1</sup>,</span>
             <span class="author-block">
@@ -84,23 +59,13 @@
               <a href="https://ece.hkust.edu.hk/junma">Jun Ma</a><sup>1</sup></span>
           </div>
 
-            <div class="is-size-5 publication-authors">
-            <span class="author-block"><br><sup>1</sup>The Hong Kong University of Science and Technology</span>
-            <span class="author-block"><br><sup>2</sup>Great Bay University</span>
-            </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Robotics and Autonomous Systems Thrust, HKUST</span>
+            <span class="author-block"><sup>2</sup>School of Engineering, Great Bay University</span>
+          </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://proceedings.mlr.press/v229/zhang23h/zhang23h.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2502.06359"
                    class="external-link button is-normal is-rounded is-dark">
@@ -110,7 +75,6 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
               <span class="link-block">
                 <a href="https://youtu.be/uPVIg8WdFmU"
                    class="external-link button is-normal is-rounded is-dark">
@@ -120,37 +84,16 @@
                   <span>Supplementary Video</span>
                 </a>
               </span>
-              <!-- <span class="link-block">
-                <a href="https://youtu.be/TODO"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Presentation Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
               <span class="link-block">
-                <a href=" https://github.com/zack4417/OACP"
+                <a href="https://github.com/zack4417/OACP"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
-                  </a>
-              </span>
-              <!-- Poster Link. -->
-              <!-- <span class="link-block">
-                <a href="Poster_GCBF.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-image"></i>
-                  </span>
-                  <span>Poster</span>
                 </a>
-              </span> -->
+              </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -158,390 +101,348 @@
   </div>
 </section>
 
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="title is-3"><center>Generalizable distributed safe controllers for 1000+ agents.</center></h2>
-      <h2 class="title is-4"><center>We have improved GCBF to <a href="https://mit-realm.github.io/gcbfplus/">GCBF+</a>!</center></h2>
-    </div>
-  </div>
-</section> -->
-
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/TODO?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
-
-    <!-- Abstract. -->
-    <div class="column"></div>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-Ensuring safe driving while maintaining travel efficiency for autonomous vehicles in dynamic and occluded environments is a critical challenge. This paper proposes an occlusion-aware contingency safety-critical planning approach for real-time autonomous driving in such environments. Leveraging reachability analysis for risk assessment, forward reachable sets of occluded phantom vehicles are computed to quantify dynamic velocity boundaries. These velocity boundaries are incorporated into a biconvex nonlinear programming (NLP) formulation, enabling simultaneous optimization of exploration and fallback trajectories within a receding horizon planning framework. To facilitate real-time optimization and ensure coordination between trajectories, we employ the consensus alternating direction method of multipliers (ADMM) to decompose the biconvex NLP problem into low-dimensional convex subproblems. The effectiveness of the proposed approach is validated through simulation studies and real-world experiments in occluded intersections. Experimental results demonstrate enhanced safety and improved travel efficiency, enabling real-time safe trajectory generation in dynamic occluded intersections under varying obstacle conditions.  </p>
+Ensuring safe driving while maintaining travel efficiency for autonomous vehicles in dynamic and occluded environments is a critical challenge. This paper proposes an occlusion-aware contingency safety-critical planning approach for real-time autonomous driving in such environments. Leveraging reachability analysis for risk assessment, forward reachable sets of occluded phantom vehicles are computed to quantify dynamic velocity boundaries. These velocity boundaries are incorporated into a biconvex nonlinear programming (NLP) formulation, enabling simultaneous optimization of exploration and fallback trajectories within a receding horizon planning framework. To facilitate real-time optimization and ensure coordination between trajectories, we employ the consensus alternating direction method of multipliers (ADMM) to decompose the biconvex NLP problem into low-dimensional convex subproblems. The effectiveness of the proposed approach is validated through simulation studies and real-world experiments in occluded intersections. Experimental results demonstrate enhanced safety and improved travel efficiency, enabling real-time safe trajectory generation in dynamic occluded intersections under varying obstacle conditions.          </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
   </div>
 </section>
-
-
+ 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Main point 1 -->
-   <div class="column">
-  <div class="content">
-    <h2 class="title is-3">Simulation Results</h2>
-    <div class="content has-text-justified">
-          <b>
-            The ego vehicle is tasked with navigating through the occluded intersection while maintaining its original desired driving lane.
-          </b> 
-       <div class="columns">
-      <div class="column">
-        <h3 class="title is-4 has-text-centered mt-5">  Ablation Study  </h3>
-      </div>
-    </div>
-    <!-- First Row: Third-person View  -->
-    <div class="columns">
-      <div class="column">
-        <h3 class="title is-5 has-text-centered">Third-person View </h3>
-      </div>
-    </div>
-    
-    <div class="columns is-centered">
-      <!-- Occlusion-aware -->
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/OCC_front.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-italic mt-2">
-          Occlusion-aware contingency planner
-        </p>
-      </div>
-      
-      <!-- Occlusion-Ignorant -->
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/No_OCC_Front.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-italic mt-2">
-           Occlusion-ignorant ablation 
-        </p>
-      </div>
-    </div>
-    
-    <!-- Second Row: Top-Down View -->
-    <div class="columns">
-      <div class="column">
-        <h3 class="title is-5 has-text-centered mt-5">Top-Down View</h3>
-      </div>
-    </div>
-    
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/OCC_third.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-italic mt-2">
-          Occlusion-aware contingency planner
-        </p>
-      </div>
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/No_OCC_third.mp4" type="video/mp4">
-        </video>
-       <p class="has-text-centered is-italic mt-2">
-           Occlusion-ignorant ablation 
-        </p>
+    <!-- Simulation Results Section -->
+    <div class="column">
+      <div class="content">
+        <h2 class="title is-3">Simulation Results</h2>
+        <div class="content has-text-justified">
+          <p class="has-text-centered">
+            <b>The ego vehicle navigates through an occluded intersection while maintaining its original lane under dense traffic conditions</b>
+          </p>
+            <!-- Performance Table -->
+          <div class="box mt-6">
+            <h3 class="title is-4 has-text-centered">Performance Comparison</h3>
+            <div class="table-container">
+              <table class="table is-bordered is-striped is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Task Duration (s)</th>
+                    <th>Avg. Velocity (m/s)</th>
+                    <th>Min. Velocity (m/s)</th>
+                    <th> (Avg./Max./Min.) Comp. Time (ms)</th> 
+                    <th>Collision</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong> Ours </strong></td>
+                    <td>12.50</td>
+                    <td>4.68</td>
+                    <td>1.64</td>
+                    <td>23.83/44.75/0.56</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>ST-RHC</td>
+                    <td>17.90</td>
+                    <td>3.11</td>
+                    <td>0.00 </td>
+                    <td>42.90/227.06/5.21</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>Control-Tree</td>
+                    <td>16.40</td>
+                    <td>3.53</td>
+                    <td>0.00251</td>
+                    <td>260.86/270.75/240.25</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>Occlusion-Ignorant</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Yes</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="is-italic has-text-centered mt-2">
+              Our method achieves 30.17% faster traversal than ST-RHC and 23.78% faster than Control-Tree
+            </p>
+          </div>
+          
+          <!-- Ablation Study -->
+          <h3 class="title is-4 mt-6">Ablation Study: Occlusion-Aware vs Ignorant</h3>
+          
+          <!-- Third-person View -->
+          <h4 class="title is-5 has-text-centered">Third-person View</h4>
+          <div class="columns is-centered">
+            <div class="column">
+              <video class="video-player" autoplay muted loop playsinline>
+                <source src="videos/OCC_front.mp4" type="video/mp4">
+              </video>
+              <p class="has-text-centered is-italic mt-2">
+                Our method: Safe navigation through occluded intersection
+              </p>
+            </div>
+            <div class="column">
+              <video class="video-player" autoplay muted loop playsinline>
+                <source src="videos/No_OCC_Front.mp4" type="video/mp4">
+              </video>
+              <p class="has-text-centered is-italic mt-2">
+                Occlusion-ignorant: Collision with phantom vehicle
+              </p>
+            </div>
+          </div>
+          
+          <!-- Top-Down View -->
+          <h4 class="title is-5 has-text-centered mt-5">Top-Down View</h4>
+          <div class="columns is-centered">
+            <div class="column">
+              <video class="video-player" autoplay muted loop playsinline>
+                <source src="videos/OCC_third.mp4" type="video/mp4">
+              </video>
+              <p class="has-text-centered is-italic mt-2">
+                Our method: Efficient trajectory planning
+              </p>
+            </div>
+            <div class="column">
+              <video class="video-player" autoplay muted loop playsinline>
+                <source src="videos/No_OCC_third.mp4" type="video/mp4">
+              </video>
+              <p class="has-text-centered is-italic mt-2">
+                Occlusion-ignorant: Failure to account for hidden risks
+              </p>
+            </div>
+          </div>
+          
+        
+          <!-- Comparative Analysis -->
+          <h3 class="title is-4 mt-6">Comparative Analysis</h3>
+          
+          <!-- Control-Tree Comparison -->
+          <h4 class="title is-5 has-text-centered">Our Method vs Control-Tree</h4>
+          <div class="columns">
+            <div class="column">
+              <h5 class="title is-6 has-text-centered">Third-person View</h5>
+              <div class="columns is-centered">
+                <div class="column">
+                  <video class="video-player" autoplay muted loop playsinline>
+                    <source src="videos/OCC_front.mp4" type="video/mp4">
+                  </video>
+                  <p class="has-text-centered is-italic mt-2">
+                    OACP: Dynamic adaptation
+                  </p>
+                </div>
+                <div class="column">
+                  <video class="video-player" autoplay muted loop playsinline>
+                    <source src="videos/control_tree_third.mp4" type="video/mp4">
+                  </video>
+                  <p class="has-text-centered is-italic mt-2">
+                    Control-Tree: Conservative behaviors
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="columns mt-5">
+            <div class="column">
+              <h5 class="title is-6 has-text-centered">Top-Down View</h5>
+              <div class="columns is-centered">
+                <div class="column">
+                  <video class="video-player" autoplay muted loop playsinline>
+                    <source src="videos/OCC_third.mp4" type="video/mp4">
+                  </video>
+                  <p class="has-text-centered is-italic mt-2">
+                    OACP: Efficient trajectory
+                  </p>
+                </div>
+                <div class="column">
+                  <video class="video-player" autoplay muted loop playsinline>
+                    <source src="videos/control_tree_top.mp4" type="video/mp4">
+                  </video>
+                  <p class="has-text-centered is-italic mt-2">
+                    Control-Tree: Conservative behaviors
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- ST-RHC Comparison -->
+          <h4 class="title is-5 has-text-centered mt-6">Our Method vs ST-RHC</h4>
+          <div class="columns">
+            <div class="column">
+              <h5 class="title is-6 has-text-centered">Third-person View</h5>
+              <div class="columns is-centered">
+                <div class="column">
+                  <video class="video-player" autoplay muted loop playsinline>
+                    <source src="videos/OCC_front.mp4" type="video/mp4">
+                  </video>
+                  <p class="has-text-centered is-italic mt-2">
+                    OACP: Dynamic adaptation
+                  </p>
+                </div>
+                <div class="column">
+                  <video class="video-player" autoplay muted loop playsinline>
+                    <source src="videos/NMPC_front.mp4" type="video/mp4">
+                  </video>
+                  <p class="has-text-centered is-italic mt-2">
+                    ST-RHC: Conservative behaviors
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="columns mt-5">
+            <div class="column">
+              <h5 class="title is-6 has-text-centered">Top-Down View</h5>
+              <div class="columns is-centered">
+                <div class="column">
+                  <video class="video-player" autoplay muted loop playsinline>
+                    <source src="videos/OCC_third.mp4" type="video/mp4">
+                  </video>
+                  <p class="has-text-centered is-italic mt-2">
+                    OACP: Efficient Navigation 
+                  </p>
+                </div>
+                <div class="column">
+                  <video class="video-player" autoplay muted loop playsinline>
+                    <source src="videos/NMPC_third.mp4" type="video/mp4">
+                  </video>
+                  <p class="has-text-centered is-italic mt-2">
+                    ST-RHC: Conservative behaviors
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-
-
-     <div class="columns">
-      <div class="column">
-        <h3 class="title is-4 has-text-centered mt-5">   Occlusion-aware contingency planner VS Control-Tree  </h3>
-      </div>
-    </div>
-    <!-- First Row: Third-person View  -->
-    <div class="columns">
-      <div class="column">
-        <h3 class="title is-5 has-text-centered">Third-person View </h3>
-      </div>
-    </div>
-    
-    <div class="columns is-centered">
-      <!-- Occlusion-aware -->
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/OCC_front.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-italic mt-2">
-          Occlusion-aware contingency planner
-        </p>
-      </div>
-      
-      <!-- Occlusion-Ignorant -->
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/control_tree_third.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-italic mt-2">
-          Control-Tree 
-        </p>
-      </div>
-    </div>
-    
-    <!-- Second Row: Top-Down View -->
-    <div class="columns">
-      <div class="column">
-        <h3 class="title is-5 has-text-centered mt-5">Top-Down View</h3>
-      </div>
-    </div>
-    
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/OCC_third.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-italic mt-2">
-          Occlusion-aware contingency planner
-        </p>
-      </div>
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/control_tree_top.mp4" type="video/mp4">
-        </video>
-       <p class="has-text-centered is-italic mt-2">
-           Control-Tree
-        </p>
-      </div>
-    </div>
- 
-
-   <div class="columns">
-      <div class="column">
-        <h3 class="title is-4 has-text-centered mt-5">     Occlusion-aware contingency planner vs ST-RHC Baseline
-</h3>
-      </div>
-    </div>
-    
-
-    <!-- Third Row: GCBF Controller -->
-    <div class="columns">
-      <div class="column">
-        <h3 class="title is-5 has-text-centered mt-5">
-          Third-person View 
-        </h3>
-      </div>
-    </div>
-    
-    <div class="columns is-centered">
-      <!-- Third-person View  -->
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/OCC_front.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-italic mt-2">
-          Occlusion-aware contingency planner
-        </p>
-      </div>
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/NMPC_front.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-italic mt-2">
-          ST-RHC  
-        </p>
-      </div>
-    </div>
-    
-    <!-- Fourth Row: Top-Down View -->
-      <div class="columns">
-      <div class="column">
-        <h3 class="title is-5 has-text-centered mt-5">Top-Down View</h3>
-      </div>
-    </div>
-    <div class="columns is-centered mt-4">
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/OCC_third.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-italic mt-2">
-          Occlusion-aware contingency planner
-        </p>
-      </div>
-      <div class="column is-half">
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/NMPC_third.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-italic mt-2">
-          ST-RHC  
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    <!--/ Main point 1 -->
-
-    <!-- Main point 2 -->
+    <!-- Hardware Experiments Section -->
     <div class="column">
       <div class="content">
         <h2 class="title is-3">Hardware Experiments</h2>
-          <div class="content has-text-justified"> 
-        <video class="video-player" autoplay muted loop>
-          <source src="videos/Hardware.mp4" type="video/mp4">
-        </video>
-      </div> 
+        <div class="content has-text-justified">
+          <p class="has-text-centered">
+            <b>Validation on 1:10 scale Ackermann mobile robot platform in occluded intersection scenarios</b>
+          </p>
+          
+          <div class="columns">
+            <div class="column">
+              <video class="video-player" autoplay muted loop playsinline>
+                <source src="videos/Hardware.mp4" type="video/mp4">
+              </video>
+              <p class="has-text-centered is-italic mt-2">
+                Real-world navigation in occluded intersection
+              </p>
+            </div>
+            <div class="column">
+              <div class="box">
+                <h3 class="title is-5">Experimental Setup</h3>
+                <ul>
+                  <li>TianRacer robot with NVIDIA Jetson Xavier NX</li>
+                  <li>1:10 scale vehicle (380mm × 210mm)</li>
+                  <li>OptiTrack motion capture system (180Hz)</li>
+                  <li>3 dynamic phantom vehicles</li>
+                  <li>Real-time planning at 10Hz</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <h3 class="title is-4">Real-World Navigation Snapshots</h3>
+          <div class="columns">
+            <div class="column">
+              <img src="figs/Hardware_snapshot1.png" alt="Approaching intersection">
+              <p class="has-text-centered is-italic mt-2">Snapshot 1: Approaching intersection</p>
+            </div>
+            <div class="column">
+              <img src="figs/Hardware_snapshot2.png" alt="Risk assessment">
+              <p class="has-text-centered is-italic mt-2">Snapshot 2: Risk assessment</p>
+            </div>
+            <div class="column">
+              <img src="figs/Hardware_snapshot3.png" alt="Decision making">
+              <p class="has-text-centered is-italic mt-2">Snapshot 3: Decision making</p>
+            </div>
+          </div>
+          
+          <div class="columns mt-5">
+            <div class="column">
+              <img src="figs/Hardware_snapshot4.png" alt="Navigating through">
+              <p class="has-text-centered is-italic mt-2">Snapshot 4: Navigating through</p>
+            </div>
+            <div class="column">
+              <img src="figs/Hardware_snapshot5.png" alt="Avoiding obstacles">
+              <p class="has-text-centered is-italic mt-2">Snapshot 5: Avoiding obstacles</p>
+            </div>
+            <div class="column">
+              <img src="figs/Hardware_snapshot6.png" alt="Safe traversal">
+              <p class="has-text-centered is-italic mt-2">Snapshot 6: Safe traversal</p>
+            </div>
+          </div>
+          
+          <div class="box mt-5">
+            <h3 class="title is-5">Key Results</h3>
+            <ul>
+              <li>Average optimization time: <strong>27.33ms</strong></li>
+              <li>Maximum optimization time: <strong>44.65ms</strong></li>
+              <li>Successful navigation without collisions</li>
+             </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <p>
-   The robot features an NVIDIA Jetson Xavier NX and a four-wheel configuration with Ackermann steering , simulating of a scaled road vehicle.  
-     Its sizes are 380mm by 210mm, approximately 1:10 scale relative to a full-sized vehicle. Additionally, three PVs are deployed at the intersection, consisting of two AgileX Limo Rover robots and one TianRacer robot.
-    </p> 
-    <!-- Main point 3 -->
+
+    <!-- Computational Performance Section -->
     <div class="column">
       <div class="content">
-        <h2 class="title is-3">Snapshots</h3>
-
+        <h2 class="title is-3">Computational Performance</h2>
+        <div class="content has-text-justified">
+          <div class="columns">
+            <div class="column">
+              <img src="figs/time.png" alt="Computational Performance">
+              <p class="has-text-centered is-italic mt-2">
+                Optimization time cross varying number of obstacles
+              </p>            
+            </div>
+            <div class="column">
+              <div class="box">
+              <p>
+              Our consensus ADMM approach maintains real-time performance:
+              </p>
+              <ul>
+                <li>Linear complexity with respect to number of obstacles: 𝒪(M)</li>
+                <li>Maximum computation per iteration stabilizes at 5-6 obstacles</li>
+                <li>Efficient constraint handling through parallel ADMM updates</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!--/ Main point 3 --> 
-    <!-- Three images in a single row -->
-    <div class="columns">
-    <!-- Image 1 -->
-    <div class="column">   
-        <img src="figs/Hardware_snapshot1.png"
-            class="center-image"
-            alt="GCBF contours">
-        <p class="has-text-centered is-italic mt-2">
-        Snapshot 1
-        </p>
-    </div>
-    
-    <!-- Image 2 -->
-    <div class="column">
-        <img src="figs/Hardware_snapshot2.png"
-            class="center-image"
-            alt="GCBF contours">
-        <p class="has-text-centered is-italic mt-2">
-        Snapshot 2
-        </p>
-    </div> 
-    <!-- Image 3 -->
-    <div class="column">
-        <img src="figs/Hardware_snapshot3.png"
-            class="center-image"
-            alt="GCBF contours">
-        <p class="has-text-centered is-italic mt-2">
-        Snapshot 3
-        </p>
-    </div>
-    </div>
-    <!-- Three images in a single row -->
-    <div class="columns">
-    <!-- Image 1 -->
-    <div class="column">
-        <img src="figs/Hardware_snapshot4.png"
-            class="center-image"
-            alt="GCBF contours">
-        <p class="has-text-centered is-italic mt-2">
-        Snapshot 4
-        </p>
-    </div>
-    
-    <!-- Image 2 -->
-    <div class="column">
-        <img src="figs/Hardware_snapshot5.png"
-            class="center-image"
-            alt="GCBF contours">
-        <p class="has-text-centered is-italic mt-2">
-        Snapshot 5
-        </p>
-    </div> 
-    <!-- Image 3 -->
-    <div class="column">
-        <img src="figs/Hardware_snapshot6.png"
-            class="center-image"
-            alt="GCBF contours">
-        <p class="has-text-centered is-italic mt-2">
-        Snapshot 6
-        </p>
-    </div>
-    </div>
-    <!-- Continue with text content -->
-    <p>
-    Snapshots of a real-world experimental driving task at an occluded four-lane unsignalized intersection. The TianRacer EV (outlined with a green dashed box) navigates through the intersection, with two surrounding dynamic PVs (outlined with orange and yellow dashed boxes) maintaining their respective lanes, posing potential risks. As the EV approaches the intersection, it adjusts its speed dynamically to ensure <b>safe</b> navigation.
-    </p>
-    <!-- ... rest of content ... -->
-
-
-
-    <!-- Main point 2 -->
-    <div class="column">
-      <div class="content">
-        <h2 class="title is-3">Computational Performance </h2>
-     
-      </div>
-    </div>
-    <!--/ Main point 3 --> 
-    <!--  Two images in a single row -->
-    <div class="columns">
-    <!-- Image 1 -->
-    <div class="column">   
-        <img src="figs/time.png"
-            class="center-image"
-            width="80%"
-            alt="GCBF contours">
-        <p class="has-text-centered is-italic mt-2">
-       Optimization Time (ms) Across Varying Number of Obstacles
-        </p>
-    </div>  
-    </div>
-    <!-- Continue with text content -->
-    <p>
-The statistical results of the optimization time (in ms) as the considered number of obstacles increases from two to six    </p>
-    <!-- ... rest of content ... -->
-
-
-  <!-- Concurrent Work. -->
-  <!-- <div class="column"></div>
-  <h2 class="title is-3">Related Work</h2>
-  <div class="column">
-    <div class="content">
-      <div class="content has-text-justified">
-        <p>
-          This work is the fundation of our work <a href="https://sites.google.com/view/bphto?pli=1">BPHTO</a>.
-          <br>
-          <ul>
-            <li><a href="https://sites.google.com/view/bphto?pli=1">BPHTO</a>: Barrier-Enhanced Parallel Homotopic Trajectory Optimization</li>
-          </ul>
-          <br>
-          For a survey of the field of learning safe control for multi-robot systems, see <a rel="survey" href="https://arxiv.org/pdf/2311.13714.pdf">this paper</a>.
-        </p>
-      </div>
-    </div>
-  </div> -->
-  <!--/ Concurrent Work. -->
+  </div>
 </section>
-
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{zheng2024safe,
+    <pre><code>@article{zheng2025safe,
   title={Occlusion-Aware Contingency Safety-Critical Planning for Autonomous Vehicles},
   author={Zheng, Lei and Yang, Rui and Zheng, Minzhe and Peng, Zengqi and Wang, Michael Yu and Ma, Jun},
   journal={arXiv preprint arXiv:2502.06359},
@@ -553,26 +454,12 @@ The statistical results of the optimization time (in ms) as the considered numbe
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-            This webpage template is based that used by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
-            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
-          </p>
-        </div>
-      </div>
-          </p>
-        </div>
-      </div>
+      <p>
+        This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
     </div>
   </div>
 </footer>
-
 
 </body>
 </html>
