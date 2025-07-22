@@ -187,6 +187,17 @@ High-fidelity simulations on highway and urban scenarios, and 1:10-scale hardwar
             </div>
           </div>
 
+          <div class="columns">
+            <div class="column">
+              <img src="figs/highway_p.png" alt="highway_p">
+              <p class="has-text-centered is-italic mt-2">Trajectory and speed profiles of the EV under different planning methods in the abrupt cut-in scenario.</p>
+            </div>
+            <div class="column">
+              <img src="figs/highway_a.png" alt="highway_a">
+              <p class="has-text-centered is-italic mt-2">Evolution of longitudinal and lateral acceleration profiles of EV with different planning methods (bounds shown as dashed lines).</p>
+            </div>
+          </div>
+
 
           <!-- Performance Evaluation Table -->
           <div class="box mt-6">
@@ -361,6 +372,20 @@ High-fidelity simulations on highway and urban scenarios, and 1:10-scale hardwar
         <p class="has-text-centered is-italic mt-2">The minimum EV-HV distances show that our method maintains appropriate safety margins.</p>
       </div>
       
+    </div>
+
+
+
+     <h3 class="title is-4">Sensitivity Analysis</h3>
+    <div class="columns">
+      <div class="column">
+        <img src="figs/consensus_step.png" alt="consensus_step">
+        <p class="has-text-centered is-italic mt-2">Impact of the consensus step parameter N_s on intersection navigation behaviors. Smaller values enable aggressive maneuvers while larger values enforce conservative strategies with preemptive deceleration.</p>
+      </div>
+      <div class="column">
+        <img src="figs/prob.png" alt="prob">
+        <p class="has-text-centered is-italic mt-2">Effect of the weighting parameter p_s on intersection navigation behaviors. Higher values emphasize FRS-based safety constraints, resulting in more defensive behaviors.</p>
+      </div>
     </div>
 
 
